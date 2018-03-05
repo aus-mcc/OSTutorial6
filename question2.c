@@ -17,11 +17,13 @@ int main(void)
         // Child Process
         sleep(1);
         printf("Child Process\n");
-        exit(0);
+        exit(1);
     }
     else{
-        wait(NULL);
-        printf("Parent Process\n");
+        int status;
+        if(wait(&status)){
+            printf("Parent Process\n");
+        }
     }
     return 0;
 }

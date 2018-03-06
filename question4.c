@@ -84,7 +84,7 @@ int main(void)
         pthread_join(thrs[i], NULL);
     }
 
-    for(int i=0; i<5; i++){ // print out all values in buffer
+    for(int i=0; i<5; i++){ // print out all values in buffer array
         printf("%d\n", buffer[i]);
     }
 }
